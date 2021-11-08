@@ -19,14 +19,12 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     if params[:back]
        render :new
-    else
-    if @post.save
+    elsif @post.save
        redirect_to posts_path, notice:"投稿しました！"
     else
       render :new
     end
   end
-end
 
   def update
     if @post.update(post_params)
@@ -39,7 +37,6 @@ end
   def destroy
     @post.destroy
     redirect_to posts_path, notice: "削除しました！"
-    end
   end
 
   def confirm
@@ -55,3 +52,4 @@ end
     def set_post
       @post = Post.find(params[:id])
     end
+end
