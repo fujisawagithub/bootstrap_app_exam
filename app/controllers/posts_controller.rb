@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: %i[ show edit update destroy ]
+  before_action :set_post, only: [ :show, :edit, :update, :destroy]
 
   def index
     @posts = Post.all
@@ -23,7 +23,7 @@ class PostsController < ApplicationController
     if @post.save
        redirect_to posts_path, notice:"投稿しました！"
     else
-      render "new"
+      render :new
     end
   end
 end
@@ -42,12 +42,16 @@ end
     end
   end
 
-  private
-    def set_post
-      @post = Post.find(params[:id])
-    end
+  def confirm
+    @post = Post.new(post_params)
+    render :new if @post.invalid?
+  end
 
+  private
     def post_params
       params.require(:post).permit(:content)
     end
-end
+
+    def set_post
+      @post = Post.find(params[:id])
+    end
