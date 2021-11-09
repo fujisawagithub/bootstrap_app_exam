@@ -1,9 +1,7 @@
- body {
+body {
     margin: 0;
-    min-height: 1vh;
 }
 
-/*ここからheaderです*/
 header {
     background-color: #00acee;
     height: 60px;
@@ -20,45 +18,40 @@ header {
     line-height: 64px;
 }
 
-
 .header_logo a{
     color: white;
     font-size: 22px;
     text-decoration: none;
 }
 
-.header_menus {
+.header_menu {
     float: right;
     padding-right: 30px;
     list-style-type: none;
     margin:  0px 15px;
-    
 }
 
-.header_menus li {
+.header_menu li {
     float: left;
     line-height: 64px;
     color: white;
     padding-left: 25px;
 }
 
-.header_menus a {
+.header_menu a {
     float: left;
     font-size: 22px;
     color: white;
     text-decoration: none;
 }
 
-/*ここから真ん中です*/
 .container {
     clear: both;
     background-color: white;
     max-width: 600px;
     margin: 60px auto;
-
 }
 
-/*ここからfooterです*/
 footer {
     background-color: #00acee;
     height: 60px;
@@ -79,6 +72,7 @@ footer {
     font-size: 30px;
     list-style: none;
 }
+
 input[type = "text"]{
     width: 500px;
     height:100px;
