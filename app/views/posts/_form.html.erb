@@ -12,13 +12,35 @@
     </div>
   <% end %>
 
+<body>
+<header>
+  <div class = "header_logo">
+  <h1>つぶやきの投稿</h1>
+  </div>
+     <ul class="header_menus">
+      <li>
+        <%= link_to("投稿一覧", posts_path) %>
+      </li>
+    </ul> 
+</header>
+
   <div class="post_content">
     <%= form.label :いまどうしてる？ %>
     <%= form.text_field :content %>
   </div>
 
   <div class="post_actions">
-    <%= form.submit :"投稿"%>
+    <%= form.submit :"ツイートする"%>
+  </div>
+  <div class="container">
+    <%= yield %>
   </div>
 <% end %>
-<%= link_to "一覧に戻る" , posts_path %>
+<footer>
+    <ul class="footer-logo" >
+      <li>
+        Tweeter Clone ©︎Fujisawa, inc.
+      </li>
+    </ul>
+  </footer>
+  </body>
