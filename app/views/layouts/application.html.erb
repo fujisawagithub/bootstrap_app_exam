@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+
+  <%= begin%>
+  <!DOCTYPE html>
 <html>
   <head>
     <title>PostApp</title>
@@ -26,5 +28,30 @@
       <li>Tweeter Clone ©︎Fujisawa, inc.</li>
     </ul>
   </footer>
+  </body>
+</html>
+<%end%>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>bootstrap</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <meta name="viewport" content="width=device-width">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+ <header>
+      <ul>
+        <li><a href="#">Bootstrapテキストページ</a></li>
+        <li><a href="#">トップページ</a></li>
+      </ul>
+    </header>
+    <%= yield %>
+    <footer>
+      <p>運営会社DIVE INTO CODE株式会社</p>
+      <p>© 2015-2016 DIVE INTO CODE Corp.</p>
+    </footer>
   </body>
 </html>
